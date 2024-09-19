@@ -10,6 +10,7 @@
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.7",
     "@types/react-dom": "^18.3.0",
+    "@types/telegram-web-app": "^7.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -39,5 +40,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.0",
+    "axios": "^1.7.7",
+    "mobx": "^6.13.2",
+    "mobx-react-lite": "^4.0.7",
+    "react-router-dom": "^6.26.2",
+    "sass": "^1.78.0"
   }
 }
