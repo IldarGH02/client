@@ -1,5 +1,14 @@
 .profile__preview {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 15px;
+
+    .profile__avatar {
+        width: calc(30% - 10px);
+    }
+
+    .profile__info {
+        width: calc(70% - 10px);
+    }
 }
