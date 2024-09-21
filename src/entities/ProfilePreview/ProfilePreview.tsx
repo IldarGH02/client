@@ -1,6 +1,8 @@
-import { observer } from "mobx-react-lite"
-import { useContext } from "react"
-import { Context } from "../.."
+import { observer } from "mobx-react-lite";
+import { useContext } from "react";
+import { Context } from "../..";
+
+import "./ProfilePreview.scss";
 
 export const ProfilePreview = observer(() => {
    const { userStore } = useContext(Context)
