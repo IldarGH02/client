@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../..";
 
 import "./ProfilePreview.scss";
@@ -11,12 +11,13 @@ export const ProfilePreview = observer(() => {
     const { userStore } = useContext(Context)
     const avatar = userStore.user?.photo_url
 
-    if(avatar){
-        setImg(avatar)
-    } else {
-        setImg(image)
-    }
-
+    useEffect(() => {
+        if(avatar){
+            setImg(avatar)
+        } else {
+            setImg(image)
+        }    
+    }, [])
     return (
         <div className="profile__preview">
             <div className="profile__avatar">
