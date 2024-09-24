@@ -1,0 +1,15 @@
+.create__task {
+    margin-bottom: 25px;
+
+    .custom_input {
+        width: 100%;
+        background-color: rgba(200, 200, 200, 0.45);
+        border: none;
+        padding: 15px 0 15px 10px;
+        border-radius: 15px;
+        
+        &::placeholder {
+            color: hsl(266, 86%, 65%);
+        }
+    }
+}

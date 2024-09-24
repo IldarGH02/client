@@ -1,5 +1,6 @@
 import { ProfilePreview } from "../../entities/ProfilePreview/ProfilePreview"
 import {} from '@mui/material'
+import "./ProfileBlock.scss"
 
 export const ProfileBlock = () => {
     return (

@@ -2,7 +2,7 @@ import { HomePage } from "../../pages/HomePage/HomePage"
 
 export const routes_list = [
     {
-        path: '/home',
+        path: 'home',
         element: <HomePage/>
     },
     {

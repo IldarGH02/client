@@ -1,44 +1,53 @@
+import { observer } from "mobx-react-lite"
 import { NavigationItem } from "../../entities/NavigationItem/NavigationItem"
+import { useContext } from "react"
+import { Context } from "../.."
 
-export const Navigation = () => {
+import { FaTasks } from "react-icons/fa";
+import "./Navigation.scss"
+
+export const Navigation = observer(() => {
+    const { countStore } = useContext(Context)
+
     return (
-        <div className="home__navigation">
+        <ul className="home__navigation">
             <NavigationItem
                 title="Все"
                 path="/all"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                count={countStore.all_count}
             />
             <NavigationItem
                 title="Входящие"
                 path="/in"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                count={countStore.all_count}
             />
             <NavigationItem
                 title="Сегодня"
                 path="/today"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                count={countStore.all_count}
             />
             <NavigationItem
                 title="Завтра"
                 path="/tomorrow"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                count={countStore.all_count}
             />
             <NavigationItem
                 title="Следующие 7 дней"
                 path="/next"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                count={countStore.all_count}
             />
             <NavigationItem
                 title="Выполненные"
                 path="/done"
-                image=""
-                count=""
+                image={<FaTasks/>}
+                className="done"
+                count={countStore.all_count}
             />
-        </div>
+        </ul>
     )
-}
+})
