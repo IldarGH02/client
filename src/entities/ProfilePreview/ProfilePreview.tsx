@@ -26,8 +26,7 @@ export const ProfilePreview = observer(() => {
             </div>
             <div className="profile__info">
                 <h3 className="profile__info-text">
-                    {/* {userStore.user?.first_name} */}
-                    101lab
+                    {userStore.user?.first_name}
                 </h3>
             </div>
         </div>
