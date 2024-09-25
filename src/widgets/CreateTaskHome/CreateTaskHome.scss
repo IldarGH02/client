@@ -1,15 +1,92 @@
 .create__task {
     margin-bottom: 25px;
 
-    .custom_input {
-        width: 100%;
-        background-color: rgba(200, 200, 200, 0.45);
-        border: none;
-        padding: 15px 0 15px 10px;
-        border-radius: 15px;
-        
-        &::placeholder {
-            color: hsl(266, 86%, 65%);
+    .create__task-input {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        gap: 10px;
+
+        .custom_input {
+            width: 100%;
+            background-color: rgba(200, 200, 200, 0.45);
+            border: none;
+            outline: 1px solid hsl(266, 86%, 65%);
+            padding: 15px 0 15px 10px;
+            border-radius: 15px;
+
+            &:hover {
+                box-shadow: rgba(176, 4, 255, 0.70);
+            }
+
+            &:focus-visible {
+                box-shadow: rgba(176, 4, 255, 0.70);
+            }
+            
+            &::placeholder {
+                color: hsl(266, 86%, 65%);
+            }
         }
+
+        .custom-button {
+            display: none;
+            width: 12%;
+            padding: 5px;
+            background-color: transparent;
+            border: none;
+            border-radius: 15px;
+            outline: 1px solid hsl(266, 86%, 65%);
+            animation: button-width .3s linear;
+        }
+
+        .--show {
+            display: block;
+        }
+    }
+
+    .create__task-calendar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        animation: open .3s linear;
+
+        .task__calendar-veiw {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            .task__calendar-text {
+                margin: 0;
+            }
+    
+            svg {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+
+    .active {
+        display: flex;
+    }
+}
+
+@keyframes button-width {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 12%;
+    }
+}
+
+@keyframes open {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
     }
 }

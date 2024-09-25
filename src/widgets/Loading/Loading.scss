@@ -1,0 +1,21 @@
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #500075;
+    border-top: 6px solid #b004ff;
+    box-shadow: 4px 4px 8px 0px rgba(176, 4, 255, 0.35);
+    animation: ani_circle 2s linear infinite;
+}
+
+@keyframes ani_circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

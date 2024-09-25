@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite"
-import { NavigationItem } from "../../entities/NavigationItem/NavigationItem"
+import { NavigationItem } from "./NavigationItem/NavigationItem"
 import { useContext } from "react"
 import { Context } from "../.."
 

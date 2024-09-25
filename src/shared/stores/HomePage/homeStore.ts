@@ -1,9 +1,9 @@
 import { makeAutoObservable } from "mobx";
-import { ChangeEvent, MouseEvent } from "react";
+import { ChangeEvent, FocusEvent, MouseEvent } from "react";
 
 export class HomeStore {
     task: string = ''
-    click_input: boolean = false
+    focus: boolean = false
 
     constructor() {
         makeAutoObservable(this)
@@ -14,11 +14,18 @@ export class HomeStore {
         this.task = e.target.value
     }
 
-    handleChangeClickInput = () => {
-        if(this.click_input) {
-            this.click_input = false
-        } else {
-            this.click_input = true
-        }
+    handleFocusInput = (e: FocusEvent<HTMLInputElement>) => {
+        this.focus = true
+        
+    }
+
+    handleBlurInput = (e: FocusEvent<HTMLInputElement>) => {
+        // if(e.currentTarget.id !== 'cr'){
+        //     this.focus = false
+        // }
+    }
+
+    handleClickCreateTask = (e: TouchEvent | MouseEvent<HTMLButtonElement> ) => {
+        
     }
 }
